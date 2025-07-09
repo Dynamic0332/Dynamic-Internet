@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Internet Service</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #e60000;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+    }
+
+    .plans {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background-color: #f7f7f7;
+    }
+
+    .plan-card {
+      background-color: white;
+      border: 2px solid red;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .plan-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px red;
+    }
+
+    .plan-card h2 {
+      color: #e60000;
+      font-size: 28px;
+    }
+
+    .contact {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer {
+      background-color: #e60000;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .plans {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header id="home">
+    <h1>Dynamic Internet Service</h1>
+    <p>Fast • Reliable • Affordable</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#plans">Plans</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h1>High-Speed Internet</h1>
+    <p>Experience blazing-fast internet with our flexible packages</p>
+  </section>
+
+  <section id="plans" class="plans">
+    <div class="plan-card"><h2>15 MB</h2><p>Great for basic browsing</p></div>
+    <div class="plan-card"><h2>20 MB</h2><p>Perfect for HD streaming</p></div>
+    <div class="plan-card"><h2>30 MB</h2><p>Multiple device support</p></div>
+    <div class="plan-card"><h2>40 MB</h2><p>Seamless video calls</p></div>
+    <div class="plan-card"><h2>50 MB</h2><p>Heavy downloads & gaming</p></div>
+    <div class="plan-card"><h2>75 MB</h2><p>Best for work from home</p></div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Name: Waqas</p>
+    <p>Phone: 0332-3450250 / 0333-3162838</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dynamic Internet Service. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
