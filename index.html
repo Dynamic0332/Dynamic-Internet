@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dynamic Internet Service</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 
+  <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -18,12 +18,20 @@
       background: #000;
       color: #fff;
       padding: 20px;
+    }
+
+    header .header-container {
       text-align: center;
     }
 
     header h1 {
       font-size: 48px;
       font-weight: bold;
+      margin: 0;
+    }
+
+    header p {
+      margin: 5px 0 0;
     }
 
     nav {
@@ -54,12 +62,27 @@
       color: #e60000;
       font-family: 'Roboto Slab', serif;
       text-align: center;
+      margin-bottom: 30px;
     }
 
-    ul li, .hero p, #about p, #team p {
+    ul li,
+    .hero p,
+    #about p,
+    #team p {
       font-family: 'Roboto Slab', serif;
       font-weight: 700;
       margin-bottom: 10px;
+    }
+
+    #services ul,
+    #choose ul {
+      list-style-position: inside;
+      text-align: center;
+      padding-left: 0;
+    }
+
+    #team p {
+      text-align: center;
     }
 
     .hero {
@@ -132,13 +155,26 @@
       background: #000;
       float: right;
       margin-bottom: 10px;
+      color: white;
+    }
+
+    /* Contact section aligned to left */
+    #contact {
+      text-align: left;
+    }
+    #contact h2,
+    #contact p {
+      text-align: left;
     }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>Dynamic Internet Service</h1>
-    <p>Fast • Reliable • Affordable</p>
+    <div class="header-container">
+      <h1>Dynamic Internet Service</h1>
+      <p>Fast • Reliable • Affordable</p>
+    </div>
   </header>
 
   <nav>
@@ -184,54 +220,35 @@
 
   <section id="team">
     <h2>Our Team</h2>
-    <p>RNB relies on a dynamic structure, flexible systems, and highly skilled, motivated staff to deliver quality service and client satisfaction.</p>
+    <p><strong>DIS</strong> relies on a dynamic structure, flexible systems, and highly skilled, motivated staff to deliver quality service and client satisfaction.</p>
     <p><strong>Field Network Engineering Teams:</strong> Our network design competes internationally, leveraging senior engineers with extensive multinational experience in telecommunications (ISPs, manufacturers, operators). This expertise ensures a superior internet experience for our clients.</p>
   </section>
 
   <section id="plans" class="plans">
-    <h2 style="text-align:center;">Our Packages</h2>
-    <div class="plan-card">
-      <h3>15 Mbps</h3>
-      <p>Great for basic browsing</p>
-      <button onclick="openForm('15 Mbps')">Request</button>
-    </div>
-    <div class="plan-card">
-      <h3>20 Mbps</h3>
-      <p>Perfect for HD streaming</p>
-      <button onclick="openForm('20 Mbps')">Request</button>
-    </div>
-    <div class="plan-card">
-      <h3>30 Mbps</h3>
-      <p>Multiple device support</p>
-      <button onclick="openForm('30 Mbps')">Request</button>
-    </div>
-    <div class="plan-card">
-      <h3>40 Mbps</h3>
-      <p>Seamless video calls</p>
-      <button onclick="openForm('40 Mbps')">Request</button>
-    </div>
-    <div class="plan-card">
-      <h3>50 Mbps</h3>
-      <p>Heavy downloads & gaming</p>
-      <button onclick="openForm('50 Mbps')">Request</button>
-    </div>
-    <div class="plan-card">
-      <h3>60 Mbps</h3>
-      <p>Smart homes & video conferencing</p>
-      <button onclick="openForm('60 Mbps')">Request</button>
-    </div>
-    <div class="plan-card">
-      <h3>75 Mbps</h3>
-      <p>Best for work from home</p>
-      <button onclick="openForm('75 Mbps')">Request</button>
-    </div>
+    <h2>Our Packages</h2>
+    <div class="plan-card"><h3>15 Mbps</h3><p>Great for basic browsing</p><button onclick="openForm('15 Mbps')">Request</button></div>
+    <div class="plan-card"><h3>20 Mbps</h3><p>Perfect for HD streaming</p><button onclick="openForm('20 Mbps')">Request</button></div>
+    <div class="plan-card"><h3>30 Mbps</h3><p>Multiple device support</p><button onclick="openForm('30 Mbps')">Request</button></div>
+    <div class="plan-card"><h3>40 Mbps</h3><p>Seamless video calls</p><button onclick="openForm('40 Mbps')">Request</button></div>
+    <div class="plan-card"><h3>50 Mbps</h3><p>Heavy downloads & gaming</p><button onclick="openForm('50 Mbps')">Request</button></div>
+    <div class="plan-card"><h3>60 Mbps</h3><p>Smart homes & video conferencing</p><button onclick="openForm('60 Mbps')">Request</button></div>
+    <div class="plan-card"><h3>75 Mbps</h3><p>Best for work from home</p><button onclick="openForm('75 Mbps')">Request</button></div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <p><strong>Name:</strong> Waqas</p>
-    <p><strong>Phone:</strong> <a href="https://wa.me/923323450250" target="_blank"><img src="https://img.icons8.com/ios-filled/16/000000/whatsapp.png"/> 0332-3450250</a> / <a href="https://wa.me/923333162838" target="_blank"><img src="https://img.icons8.com/ios-filled/16/000000/whatsapp.png"/> 0333-3162838</a></p>
-    <div style="max-width: 500px; float: right;">
+    <p><strong>Name:</strong> <strong>Waqas</strong></p>
+    <p><strong>Phone:</strong>
+      <strong>
+        <a href="https://wa.me/923323450250" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/16/000000/whatsapp.png"/> 0332-3450250
+        </a> /
+        <a href="https://wa.me/923333162838" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/16/000000/whatsapp.png"/> 0333-3162838
+        </a>
+      </strong>
+    </p>
+    <div style="max-width: 500px;">
       <h3>Send Us a Message</h3>
       <form action="mailto:dynamicinternet0@gmail.com" method="post" enctype="text/plain">
         <input type="text" name="name" placeholder="Your Name" required><br>
@@ -276,10 +293,7 @@
       const address = this.address.value;
       const pack = this.package.value;
       const msg = `Package: ${pack}%0AName: ${name}%0AContact: ${contact}%0AAddress: ${address}`;
-      const whatsappNumbers = [
-        '923323450250',
-        '923333162838'
-      ];
+      const whatsappNumbers = ['923323450250', '923333162838'];
       whatsappNumbers.forEach(number => {
         window.open(`https://wa.me/${number}?text=${msg}`, '_blank');
       });
