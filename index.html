@@ -1,13 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dynamic Internet Service</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
 
     body {
       margin: 0;
@@ -17,132 +15,275 @@
     }
 
     header {
-      background-color: #000;
+      background: #000;
       color: #fff;
       padding: 20px;
       text-align: center;
     }
 
+    header h1 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
     nav {
-      background-color: #e60000;
+      background: #e60000;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 15px;
+      margin: 10px;
       font-weight: bold;
     }
 
-    .hero {
-      background: #000;
-      color: white;
-      text-align: center;
+    section {
       padding: 60px 20px;
+      background-color: #f9f9f9;
+      margin: 20px;
+      border-radius: 10px;
     }
 
-    .hero h1 {
-      font-size: 48px;
+    section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      color: #e60000;
+      font-family: 'Roboto Slab', serif;
+      text-align: center;
+    }
+
+    ul li, .hero p, #about p, #team p {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
       margin-bottom: 10px;
     }
 
-    .hero p {
-      font-size: 20px;
+    .hero {
+      text-align: center;
+      color: #000;
+      padding: 60px 20px;
     }
 
     .plans {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 40px 20px;
-      background-color: #f7f7f7;
     }
 
     .plan-card {
       background-color: white;
-      border: 2px solid red;
+      border: 2px solid #e60000;
       border-radius: 10px;
       padding: 20px;
       margin: 10px;
       width: 200px;
       text-align: center;
       transition: transform 0.3s;
+      cursor: pointer;
     }
 
     .plan-card:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 10px red;
+      box-shadow: 0 0 10px #e60000;
     }
 
-    .plan-card h2 {
-      color: #e60000;
-      font-size: 28px;
-    }
-
-    .contact {
-      background-color: #000;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    footer {
+    .plan-card button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
       background-color: #e60000;
       color: white;
-      text-align: center;
-      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    @media (max-width: 600px) {
-      .plans {
-        flex-direction: column;
-        align-items: center;
-      }
+    .popup-form {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      box-shadow: 0 0 10px #000;
+      z-index: 9999;
+      border-radius: 10px;
+    }
+
+    .popup-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .popup-form button {
+      background: #e60000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .popup-form .close-btn {
+      background: #000;
+      float: right;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
-
-  <header id="home">
+  <header>
     <h1>Dynamic Internet Service</h1>
     <p>Fast • Reliable • Affordable</p>
   </header>
 
   <nav>
     <a href="#home">Home</a>
-    <a href="#plans">Plans</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#choose">Why Choose Us?</a>
+    <a href="#team">Our Team</a>
+    <a href="#plans">Our Packages</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <section class="hero">
-    <h1>High-Speed Internet</h1>
+  <section id="home" class="hero">
+    <h2>High-Speed Internet</h2>
     <p>Experience blazing-fast internet with our flexible packages</p>
   </section>
 
-  <section id="plans" class="plans">
-    <div class="plan-card"><h2>15 MB</h2><p>Great for basic browsing</p></div>
-    <div class="plan-card"><h2>20 MB</h2><p>Perfect for HD streaming</p></div>
-    <div class="plan-card"><h2>30 MB</h2><p>Multiple device support</p></div>
-    <div class="plan-card"><h2>40 MB</h2><p>Seamless video calls</p></div>
-    <div class="plan-card"><h2>50 MB</h2><p>Heavy downloads & gaming</p></div>
-    <div class="plan-card"><h2>75 MB</h2><p>Best for work from home</p></div>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Dynamic Internet Service is a leading ISP in Karachi, delivering high-speed, reliable Fiber optic internet since 2024. We excel in customer service and innovative solutions, aiming to empower customers with seamless internet access. Our state-of-the-art infrastructure ensures connectivity at home, work, or on the go.</p>
   </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Name: Waqas</p>
-    <p>Phone: 0332-3450250 / 0333-3162838</p>
+  <section id="services">
+    <h2>Services</h2>
+    <ul>
+      <li><strong>Residential Internet:</strong> High-speed broadband plans for streaming, gaming, and browsing.</li>
+      <li><strong>Fiber Optic Internet:</strong> Ultra-fast fiber technology for unparalleled speed and performance.</li>
+      <li><strong>Customer Support:</strong> 24/7 professional assistance for technical, billing, and service needs.</li>
+    </ul>
   </section>
+
+  <section id="choose">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li><strong>Reliability:</strong> Robust network infrastructure ensures consistent performance and minimal downtime.</li>
+      <li><strong>Speed:</strong> Cutting-edge technology delivers fast internet speeds for all needs.</li>
+      <li><strong>Customer Commitment:</strong> We prioritize needs, exceed expectations, and provide prompt, dedicated support.</li>
+      <li><strong>Transparency & Integrity:</strong> We believe in clear information about services and pricing.</li>
+      <li><strong>Personalized Service:</strong> Tailored support enhances experience and satisfaction.</li>
+      <li><strong>Innovative Solutions:</strong> Stay ahead with advanced technologies designed for the modern user.</li>
+    </ul>
+  </section>
+
+  <section id="team">
+    <h2>Our Team</h2>
+    <p>RNB relies on a dynamic structure, flexible systems, and highly skilled, motivated staff to deliver quality service and client satisfaction.</p>
+    <p><strong>Field Network Engineering Teams:</strong> Our network design competes internationally, leveraging senior engineers with extensive multinational experience in telecommunications (ISPs, manufacturers, operators). This expertise ensures a superior internet experience for our clients.</p>
+  </section>
+
+  <section id="plans" class="plans">
+    <h2 style="text-align:center;">Our Packages</h2>
+    <div class="plan-card">
+      <h3>15 Mbps</h3>
+      <p>Great for basic browsing</p>
+      <button onclick="openForm('15 Mbps')">Request</button>
+    </div>
+    <div class="plan-card">
+      <h3>20 Mbps</h3>
+      <p>Perfect for HD streaming</p>
+      <button onclick="openForm('20 Mbps')">Request</button>
+    </div>
+    <div class="plan-card">
+      <h3>30 Mbps</h3>
+      <p>Multiple device support</p>
+      <button onclick="openForm('30 Mbps')">Request</button>
+    </div>
+    <div class="plan-card">
+      <h3>40 Mbps</h3>
+      <p>Seamless video calls</p>
+      <button onclick="openForm('40 Mbps')">Request</button>
+    </div>
+    <div class="plan-card">
+      <h3>50 Mbps</h3>
+      <p>Heavy downloads & gaming</p>
+      <button onclick="openForm('50 Mbps')">Request</button>
+    </div>
+    <div class="plan-card">
+      <h3>60 Mbps</h3>
+      <p>Smart homes & video conferencing</p>
+      <button onclick="openForm('60 Mbps')">Request</button>
+    </div>
+    <div class="plan-card">
+      <h3>75 Mbps</h3>
+      <p>Best for work from home</p>
+      <button onclick="openForm('75 Mbps')">Request</button>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Name:</strong> Waqas</p>
+    <p><strong>Phone:</strong> <a href="https://wa.me/923323450250" target="_blank"><img src="https://img.icons8.com/ios-filled/16/000000/whatsapp.png"/> 0332-3450250</a> / <a href="https://wa.me/923333162838" target="_blank"><img src="https://img.icons8.com/ios-filled/16/000000/whatsapp.png"/> 0333-3162838</a></p>
+    <div style="max-width: 500px; float: right;">
+      <h3>Send Us a Message</h3>
+      <form action="mailto:dynamicinternet0@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <input type="text" name="subject" placeholder="Subject" required><br>
+        <textarea name="message" placeholder="Message" rows="4" style="width:100%" required></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="requestForm" class="popup-form">
+    <button class="close-btn" onclick="closeForm()">X</button>
+    <h3>Request a Package</h3>
+    <form id="packageForm">
+      <input type="hidden" id="selectedPackage" name="package">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="text" name="contact" placeholder="Contact Number" required>
+      <input type="text" name="address" placeholder="Address" required>
+      <button type="submit">Send to WhatsApp</button>
+    </form>
+  </div>
 
   <footer>
     <p>&copy; 2025 Dynamic Internet Service. All rights reserved.</p>
   </footer>
 
+  <script>
+    function openForm(packageName) {
+      document.getElementById('requestForm').style.display = 'block';
+      document.getElementById('selectedPackage').value = packageName;
+    }
+
+    function closeForm() {
+      document.getElementById('requestForm').style.display = 'none';
+    }
+
+    document.getElementById('packageForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = this.name.value;
+      const contact = this.contact.value;
+      const address = this.address.value;
+      const pack = this.package.value;
+      const msg = `Package: ${pack}%0AName: ${name}%0AContact: ${contact}%0AAddress: ${address}`;
+      const whatsappNumbers = [
+        '923323450250',
+        '923333162838'
+      ];
+      whatsappNumbers.forEach(number => {
+        window.open(`https://wa.me/${number}?text=${msg}`, '_blank');
+      });
+    });
+  </script>
 </body>
 </html>
